@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vimu Tech - Advanced Animated Website</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS (Animate On Scroll) CDN -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1a202c",
+            secondary: "#2d3748",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-sans antialiased text-gray-700">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold text-gray-800 animate__animated animate__fadeInLeft">
+        Vimu Tech
+      </div>
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#" class="hover:text-gray-800">Home</a>
+        <a href="#about" class="hover:text-gray-800">About</a>
+        <a href="#services" class="hover:text-gray-800">Services</a>
+        <a href="#contact" class="hover:text-gray-800">Contact</a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none">
+          <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-6 pt-2 pb-4 space-y-2 bg-white shadow">
+        <a href="#" class="block hover:text-gray-800">Home</a>
+        <a href="#about" class="block hover:text-gray-800">About</a>
+        <a href="#services" class="block hover:text-gray-800">Services</a>
+        <a href="#contact" class="block hover:text-gray-800">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('Picsart_23-06-25_00-44-45-153.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 animate__animated animate__fadeInDown">
+        Welcome to Vimu Tech
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-6 animate__animated animate__fadeInUp animate__delay-1s">
+        Empowering businesses with cutting-edge technology and innovative solutions.
+      </p>
+      <a href="#services" class="mt-4 px-8 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-500 transition animate__animated animate__zoomIn animate__delay-2s">
+        Discover More
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto px-6 py-20" data-aos="fade-right">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 mb-6 md:mb-0">
+        <img src="https://via.placeholder.com/500x400" alt="About Vimu Tech" class="rounded-lg shadow-lg">
+      </div>
+      <div class="w-full md:w-1/2 md:pl-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+        <p class="text-gray-600 mb-4">
+          At Vimu Tech, we specialize in delivering innovative tech solutions that drive business growth. Our team of experts is dedicated to staying ahead of technology trends.
+        </p>
+        <p class="text-gray-600">
+          Our mission is to empower businesses with the tools and insights needed to succeed in the digital age.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">
+      Our Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Service Card 1 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 15a4 4 0 014-4h10a4 4 0 014 4v6H3v-6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 7a4 4 0 010 8" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Cloud Computing</h3>
+        <p class="text-gray-600">
+          Scalable and secure cloud solutions tailored for your business needs.
+        </p>
+      </div>
+      <!-- Service Card 2 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Cyber Security</h3>
+        <p class="text-gray-600">
+          Protect your business with our advanced security strategies.
+        </p>
+      </div>
+      <!-- Service Card 3 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M13 16h-1v-4h-1m0-4h.01M12 2a10 10 0 00-4 19.5M12 2a10 10 0 014 19.5" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">IT Consulting</h3>
+        <p class="text-gray-600">
+          Expert advice to help you navigate the evolving tech landscape.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-20" data-aos="fade-up">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Get in Touch</h2>
+      <div class="max-w-xl mx-auto">
+        <form class="bg-white shadow-lg rounded-lg p-8">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <div class="flex items-center justify-between">
+            <button class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Vimu Tech. Created by Sakila.</p>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu Toggle and AOS Initialization -->
+  <script>
+    document.getElementById("mobile-menu-button").addEventListener("click", function () {
+      var mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("hidden");
+    });
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>
